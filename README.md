@@ -45,7 +45,7 @@ This is a robust RESTful API built for **ShoppyGlobe**, an e-commerce platform. 
 
 1.  **Clone the Repository:**
     ```bash
-    git clone <your-github-link>
+    git clone https://github.com/hrishihrishi/Backend-of-ShoppyGlobe/tree/main
     cd shoppyglobe-backend
     ```
 
@@ -56,10 +56,10 @@ This is a robust RESTful API built for **ShoppyGlobe**, an e-commerce platform. 
 
 3.  **Environment Variables:**
     Create a `.env` file in the root directory and add:
-    ```env
+    ```
     PORT=5000
-    MONGO_URI=your_mongodb_atlas_connection_string
-    JWT_SECRET=your_jwt_secret_key
+    MONGO_URI=mongodb+srv://hrishi_internshala:oBJHKLY9XAh3Yk3r@cluster0.zkji9lb.mongodb.net/?appName=Cluster0
+    JWT_SECRET=shoppyglobe_super_secret_key_123
     ```
 
 4.  **Seed the Database:**
@@ -96,7 +96,7 @@ This is a robust RESTful API built for **ShoppyGlobe**, an e-commerce platform. 
 
 ---
 
-## Github link: https://github.com/hrishihrishi/Backend-of-ShoppyGlobe/tree/main
+**Github link: https://github.com/hrishihrishi/Backend-of-ShoppyGlobe/tree/main**
 
 ---
 
