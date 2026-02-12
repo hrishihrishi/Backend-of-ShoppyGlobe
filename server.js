@@ -21,6 +21,10 @@ app.use('/api/auth', authRoutes); // Users will hit /api/auth/register and /api/
 // PRODUCT ROUTES
 app.use('/products', productRoutes)
 
+// CART ROUTES
+const cartRoutes = require('./routes/cartRoutes');
+app.use('/cart', cartRoutes);
+
 // Basic Route for testing
 app.get('/', (req, res) => {
     res.send('ShoppyGlobe API is running...');
