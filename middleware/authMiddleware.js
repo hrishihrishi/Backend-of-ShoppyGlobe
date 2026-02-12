@@ -6,7 +6,10 @@ const protect = (req, res, next) => {
 
     if (token && token.startsWith('Bearer')) {
         try {
+            // Remove 'Bearer ' from the token string
             token = token.split(' ')[1];
+
+            // Verify the token and decode the user information
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
             req.user = decoded;
             next();
