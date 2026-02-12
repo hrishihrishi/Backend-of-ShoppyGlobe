@@ -75,6 +75,48 @@ This is a robust RESTful API built for **ShoppyGlobe**, an e-commerce platform. 
 
 ---
 
+
+## 🧪 Detailed Thunder Client Testing Instructions
+
+Follow these steps in order to verify the API functionality:
+
+### Step 1: User Registration & Login
+1. Open Thunder Client and create a **POST** request to: `http://localhost:5000/api/auth/register`.
+2. Use the "User Registration" JSON payload from the section above.
+3. Create a **POST** request to: `http://localhost:5000/api/auth/login`.
+4. Once you receive the response, **copy the `token` string** (do not include the quotes).
+
+### Step 2: Product Discovery
+1. Create a **GET** request to: `http://localhost:5000/products`.
+2. From the list of products returned, **copy one `_id` value** (e.g., `65b...`). This is your `productId`.
+
+### Step 3: Accessing Protected Cart Routes
+1. Create a **POST** request to: `http://localhost:5000/cart`.
+2. Click on the **Auth** tab in Thunder Client.
+3. Select **Bearer Token** from the dropdown menu.
+4. Paste the token you copied in Step 1 into the "Token" field.
+5. In the **Body** tab, use the "Add Product to Cart" JSON payload, pasting your copied `productId`.
+6. Click **Send**. You should see the item successfully added to your cart in the database.
+
+
+
+### Step 4: Updating & Deleting
+1. **To Update:** Change the method to **PUT** and use the URL: `http://localhost:5000/cart/<PASTE_PRODUCT_ID_HERE>`. Provide a new quantity in the JSON body.
+2. **To Delete:** Change the method to **DELETE** and use the URL: `http://localhost:5000/cart/<PASTE_PRODUCT_ID_HERE>`. No body is required.
+
+---
+
+## ✅ Final Submission Checklist
+- [ ] MongoDB Atlas "Network Access" set to `0.0.0.0/0`.
+- [ ] `.env` file verified (but excluded from GitHub via `.gitignore`).
+- [ ] `seed.js` executed to populate the Cloud Database.
+- [ ] Screenshots of all successful Thunder Client tests added to `/screenshots` folder.
+
+---
+
+**Server running on : http://localhost:5000**
+
+
 ### Authentication
 | Feature | Method | Endpoint |
 | :--- | :--- | :--- |
