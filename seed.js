@@ -1,3 +1,5 @@
+// seed.js file for seeding initial product data into the database. THIS HAS TO BE RUN ONCE ONLY!
+
 require('dotenv').config();
 const mongoose = require('mongoose');
 const axios = require('axios'); // You'll need to run: npm install axios

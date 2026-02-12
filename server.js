@@ -5,10 +5,14 @@ const cors = require('cors');
 const productRoutes = require('./routes/productRoutes');
 
 const app = express();
-
-// Middleware
+// Middlewares
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+
+// AUTH ROUTES FOR REGISTER AND LOGIN
+const authRoutes = require('./routes/authRoutes');
+app.use('/api/auth', authRoutes); // Users will hit /api/auth/register and /api/auth/login for authentication
 
 // Database Connection
 connectDB();

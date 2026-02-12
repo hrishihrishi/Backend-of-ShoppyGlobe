@@ -1,3 +1,5 @@
+// LOGIC FOR DEFINING THE PRODUCT SCHEMA USING MONGOOSE
+
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({

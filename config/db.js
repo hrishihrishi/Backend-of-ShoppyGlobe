@@ -1,3 +1,5 @@
+// LOGIC FOR CONNECTING TO MONGODB DATABASE USING MONGOOSE
+
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
